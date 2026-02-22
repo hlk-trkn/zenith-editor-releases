@@ -15,8 +15,8 @@ This repository is release-only (binaries, docs, and release notes). Zenith Edit
 Add your screenshots to `docs/screenshots/` and keep these links:
 
 ![Editor Overview](docs/screenshots/editor-overview.png)
-![Subtitles Panel](docs/screenshots/subtitles-panel.png)
 ![Timeline](docs/screenshots/timeline.png)
+![Subtitles Panel](docs/screenshots/subtitles-panel.png)
 ![Export Result](docs/screenshots/export-result.png)
 
 ## Quick How To Use
