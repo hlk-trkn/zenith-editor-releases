@@ -10,8 +10,19 @@ This repository is release-only (binaries, docs, and release notes). Zenith Edit
 - Download the macOS DMG.
 - Drag `Zenith Desktop.app` into Applications.
 
-## Screenshots
+## Required Dependency (macOS)
 
+Zenith needs both `ffmpeg` and `ffprobe`.
+
+Install:
+
+```bash
+brew install ffmpeg
+```
+
+If Zenith was open during install, restart the app.
+
+## Screenshots
 Click any screenshot to open full resolution.
 
 <table>
@@ -79,15 +90,3 @@ Speed vs accuracy guide:
 - Select the model.
 - Click **Download Model**.
 - Missing models can auto-download when generation starts.
-
-## Required Dependency (macOS)
-
-Zenith needs both `ffmpeg` and `ffprobe`.
-
-Install:
-
-```bash
-brew install ffmpeg
-```
-
-If Zenith was open during install, restart the app.
