@@ -6,43 +6,73 @@ This repository is release-only (binaries, docs, and release notes). Zenith Edit
 
 ## Download
 
-- Open the latest release on GitHub Releases.
-- Download the macOS DMG.
-- Drag `Zenith Desktop.app` into Applications.
+- Latest release page (macOS + Windows):
+  - macOS: https://github.com/hlk-trkn/zenith-editor-releases/releases/latest
+  - Windows: https://github.com/hlk-trkn/zenith-editor-releases/releases/latest
+- On that page, download:
+  - macOS build: `Zenith.Editor_*_aarch64.dmg`
+  - Windows build: `Zenith Desktop_*_x64_en-US.msi`
+- Install:
+  - macOS: open DMG, drag `Zenith Desktop.app` to Applications.
+  - Windows: run MSI, then launch from Start Menu.
 
-## Required Dependency (macOS)
+If Windows shows SmartScreen warning on first run, click `More info` -> `Run anyway`.
 
-Zenith needs both `ffmpeg` and `ffprobe`.
+## FFmpeg Dependency (Required)
 
-If you already have Homebrew:
+Zenith needs both `ffmpeg` and `ffprobe` on both macOS and Windows.
+
+### macOS (Homebrew)
+
+Quick install (recommended):
 
 ```bash
+if ! command -v brew >/dev/null 2>&1; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 brew install ffmpeg
 ```
 
-If you do not have Homebrew yet:
-
-1. Open **Terminal** (`Applications -> Utilities -> Terminal`).
-2. Install Homebrew:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-3. Then install FFmpeg:
-
-```bash
-brew install ffmpeg
-```
-
-If Terminal says `brew: command not found` after installation, run:
+If Terminal says `brew: command not found` after install, run:
 
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+brew install ffmpeg
 ```
 
-If Zenith was open during install, restart the app.
+### Windows (choose one package manager)
+
+Winget (recommended):
+
+```powershell
+winget install --id Gyan.FFmpeg -e
+```
+
+Chocolatey:
+
+```powershell
+choco install ffmpeg -y
+```
+
+Scoop:
+
+```powershell
+scoop install ffmpeg
+```
+
+### Verify install
+
+Run in terminal (macOS/Linux) or PowerShell (Windows):
+
+```bash
+ffmpeg -version
+ffprobe -version
+```
+
+Then fully close and reopen Zenith Editor.
+
+Note: Homebrew is for macOS. On Windows use Winget/Chocolatey/Scoop or install FFmpeg manually and add it to `PATH`.
 
 ## Screenshots
 Click any screenshot to open full resolution.
