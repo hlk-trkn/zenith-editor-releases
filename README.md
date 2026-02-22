@@ -12,23 +12,42 @@ This repository is release-only (binaries, docs, and release notes). Zenith Edit
 
 ## Screenshots
 
-Add your screenshots to `docs/screenshots/` and keep these links:
+Click any screenshot to open full resolution.
 
-<a href="docs/screenshots/editor-overview.png">
-  <img src="docs/screenshots/editor-overview.png" alt="Editor Overview" width="420" />
-</a>
-
-<a href="docs/screenshots/timeline.png">
-  <img src="docs/screenshots/timeline.png" alt="Timeline" width="420" />
-</a>
-
-<a href="docs/screenshots/subtitles-panel.png">
-  <img src="docs/screenshots/subtitles-panel.png" alt="Subtitles Panel" width="420" />
-</a>
-
-<a href="docs/screenshots/export-result.png">
-  <img src="docs/screenshots/export-result.png" alt="Export Result" width="420" />
-</a>
+<table>
+  <tr>
+    <td align="center">
+      <a href="docs/screenshots/editor-overview.png">
+        <img src="docs/screenshots/editor-overview.png" alt="Editor Overview" width="360" />
+      </a>
+      <br />
+      <sub>Editor Overview</sub>
+    </td>
+    <td align="center">
+      <a href="docs/screenshots/timeline.png">
+        <img src="docs/screenshots/timeline.png" alt="Timeline" width="360" />
+      </a>
+      <br />
+      <sub>Timeline</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="docs/screenshots/subtitles-panel.png">
+        <img src="docs/screenshots/subtitles-panel.png" alt="Subtitles Panel" width="360" />
+      </a>
+      <br />
+      <sub>Subtitles Panel</sub>
+    </td>
+    <td align="center">
+      <a href="docs/screenshots/export-result.png">
+        <img src="docs/screenshots/export-result.png" alt="Export Result" width="360" />
+      </a>
+      <br />
+      <sub>Export Result</sub>
+    </td>
+  </tr>
+</table>
 
 ## Quick How To Use
 
