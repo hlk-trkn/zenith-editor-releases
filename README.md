@@ -35,8 +35,14 @@ This repository is release-only (binaries, docs, and release notes). Zenith Edit
 
 - Latest release page (macOS + Windows): https://github.com/hlk-trkn/zenith-editor-releases/releases/latest
 - Files to download from Releases:
-  - macOS: `Zenith.Editor_*_aarch64.dmg`
+  - macOS: `Zenith Desktop_*_aarch64.dmg` (older releases may use `Zenith Editor_*_aarch64.dmg`)
   - Windows: `Zenith Desktop_*_x64_en-US.msi`
+
+### Repository build archive layout
+
+- `Builds/PC/` -> local archive of Windows MSI builds and checksums
+- `Builds/Mac/` -> local archive of macOS DMG builds and checksums
+- Official public downloads should always come from the GitHub Releases page above
 
 ## How to Install
 
