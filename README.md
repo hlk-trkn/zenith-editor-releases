@@ -1,30 +1,57 @@
 # Zenith Editor
 
-Zenith Editor is a local-first desktop subtitle editor for short-form video.
+<div align="center">
+  <img src="docs/screenshots/app-icon.png" alt="Zenith Editor App Icon" width="120" />
+  <h2>Local-first subtitle editor for short-form video</h2>
+  <p>Edit fast, generate captions on-device, and export clean social-ready videos.</p>
+  <p>
+    <a href="#download">Download</a> ·
+    <a href="#features">Features</a> ·
+    <a href="#how-to-install">How to Install</a> ·
+    <a href="#quick-how-to-use">How To Use</a> ·
+    <a href="#whisper-models">Whisper Models</a>
+  </p>
+</div>
+
+<p align="center">
+  <a href="docs/screenshots/editor-overview.png">
+    <img src="docs/screenshots/editor-overview.png" alt="Zenith Editor full app screenshot" width="1100" />
+  </a>
+</p>
+
+Zenith Editor is a desktop app that keeps your workflow local and focused: import media, edit on a timeline, generate subtitles with local Whisper models, style captions, and export to MP4.
 
 This repository is release-only (binaries, docs, and release notes). Zenith Editor source code is currently private.
 
+## Features
+
+- Local-first subtitle workflow for short-form content.
+- Timeline-based editing with project asset management.
+- On-device subtitle generation using Whisper models.
+- Subtitle styling controls (font, size, text color, background, alignment).
+- One-click MP4 export for publishing.
+
 ## Download
 
-- Latest release page (macOS + Windows):
-  - macOS: https://github.com/hlk-trkn/zenith-editor-releases/releases/latest
-  - Windows: https://github.com/hlk-trkn/zenith-editor-releases/releases/latest
-- On that page, download:
-  - macOS build: `Zenith.Editor_*_aarch64.dmg`
-  - Windows build: `Zenith Desktop_*_x64_en-US.msi`
-- Install:
-  - macOS: open DMG, drag `Zenith Desktop.app` to Applications.
-  - Windows: run MSI, then launch from Start Menu.
+- Latest release page (macOS + Windows): https://github.com/hlk-trkn/zenith-editor-releases/releases/latest
+- Files to download from Releases:
+  - macOS: `Zenith.Editor_*_aarch64.dmg`
+  - Windows: `Zenith Desktop_*_x64_en-US.msi`
 
-If Windows shows SmartScreen warning on first run, click `More info` -> `Run anyway`.
+## How to Install
 
-## FFmpeg Dependency (Required)
+### 1) Install Zenith Editor
 
-Zenith needs both `ffmpeg` and `ffprobe` on both macOS and Windows.
+- macOS: open the DMG and drag `Zenith Desktop.app` into Applications.
+- Windows: run the MSI and launch from Start Menu.
 
-### macOS (Homebrew)
+If Windows SmartScreen appears on first run, click `More info` -> `Run anyway`.
 
-Quick install (recommended):
+### 2) Install FFmpeg (Required)
+
+Zenith needs both `ffmpeg` and `ffprobe` on macOS and Windows.
+
+macOS (Homebrew, recommended):
 
 ```bash
 if ! command -v brew >/dev/null 2>&1; then
@@ -33,7 +60,7 @@ fi
 brew install ffmpeg
 ```
 
-If Terminal says `brew: command not found` after install, run:
+If Terminal shows `brew: command not found` after installing Homebrew:
 
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -41,29 +68,23 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install ffmpeg
 ```
 
-### Windows (choose one package manager)
-
-Winget (recommended):
+Windows (choose one):
 
 ```powershell
 winget install --id Gyan.FFmpeg -e
 ```
 
-Chocolatey:
-
 ```powershell
 choco install ffmpeg -y
 ```
-
-Scoop:
 
 ```powershell
 scoop install ffmpeg
 ```
 
-### Verify install
+### 3) Verify FFmpeg
 
-Run in terminal (macOS/Linux) or PowerShell (Windows):
+Run in Terminal (macOS) or PowerShell (Windows):
 
 ```bash
 ffmpeg -version
@@ -72,9 +93,8 @@ ffprobe -version
 
 Then fully close and reopen Zenith Editor.
 
-Note: Homebrew is for macOS. On Windows use Winget/Chocolatey/Scoop or install FFmpeg manually and add it to `PATH`.
-
 ## Screenshots
+
 Click any screenshot to open full resolution.
 
 <table>
@@ -136,18 +156,19 @@ Speed vs accuracy guide:
 - **Medium**: best overall balance for most users.
 - **Large V3 Turbo**: strongest accuracy on difficult/noisy audio, heaviest runtime.
 
-### Model download
+### Model Download
 
 - Open **Inspector -> Subtitles**.
 - Select the model.
 - Click **Download Model**.
 - Missing models can auto-download when generation starts.
 
+## Open-Source Dependencies
 
-### Open-Source Dependencies
-Zenith Editor relies on open-source components:
+Zenith Editor relies on these open-source components:
+
 - FFmpeg / ffprobe (media decode/encode/render pipeline)  
-  Project license: LGPL-2.1-or-later, with optional GPL components depending on build.
+  License: LGPL-2.1-or-later (with optional GPL components depending on build)
 - whisper.cpp (local ASR runtime)  
   License: MIT
 - OpenAI Whisper models/code (speech-to-text model family)  
@@ -157,5 +178,4 @@ Zenith Editor relies on open-source components:
 
 For full attribution and license references, see `THIRD_PARTY_NOTICES.md`.
 
-Note: Zenith currently expects FFmpeg to be installed on the user system and does not bundle FFmpeg binaries in the app package.
-Custom/community Whisper models may use different licenses; check each model page before use.
+Note: Zenith expects FFmpeg on the user system and does not bundle FFmpeg binaries in the app package. Custom/community Whisper models may use different licenses; check each model page before use.
